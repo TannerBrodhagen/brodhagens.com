@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+            margin-bottom: 5px;
+        }
+    }
+    
+}
+main {
+    margin-left: 220px;
+    padding: 5px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    color: #eee;
+    a {
+        color: #eee;
+        text-decoration: none;
+    }
+}
+.tiles {
+    display: grid;
+    gap: 10px;
+}
+.tile {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    background-color: #f9f9f9;
+    border: 1px solid #f9f9f9;
+    border-radius: 8px;
+}
+.tile-left {
+    display: block;
+}
+.tile-right {
+    padding: 10px;
+    transition: transform 0.2s;
+}
+.tile-image {
+    pointer-events: none;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+@media (max-width: 1200px) {
+    .tile {
+        grid-template-columns: 1fr; /* Stack columns into rows */
+    }
+}
+
+.camera-details, .photo-exif {
+    display: flex;
+    flex-direction: column;
+
+}
