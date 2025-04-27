@@ -3,3 +3,4 @@
 
 <x-backpack::menu-item title="Photos" icon="la la-camera" :link="backpack_url('photo')" />
 <x-backpack::menu-item title="Tags" icon="la la-tag" :link="backpack_url('tag')" />
+<x-backpack::menu-item title='Logs' icon='la la-terminal' :link="backpack_url('log')" />

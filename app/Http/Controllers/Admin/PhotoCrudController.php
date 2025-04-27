@@ -85,7 +85,7 @@ class PhotoCrudController extends CrudController
             $exif =  array_map(function($value) {
                     return is_string($value) ? trim($value) : $value;
                 }, $exif);
-            $entry->date_taken = $exif['DateTimeOriginal'];
+            $entry->date_taken = $exif['DateTimeOriginal'] ?? NULL;
             $entry->camera_make = $exif['Make'] ?? NULL;
             $entry->camera_model = $exif['Model'] ?? NULL;
             $entry->camera_lens = $exif['Lens Model'] ?? ($exif['UndefinedTag:0xA434'] ?? NULL);

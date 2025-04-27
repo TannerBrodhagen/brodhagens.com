@@ -22,6 +22,24 @@ class Photo extends Model
         return $this->belongsToMany(Tag::class, 'photo_tags', 'photo_id', 'tag_id');
     }
 
-    
+    // simple Date format from date_taken
+    public function getDateTakenAttribute($value)
+    {
+        return $value ? \Carbon\Carbon::parse($value)->format('Y-m-d') : null;
+    }
+    // simple Camera Make format from camera_make
+    public function getCameraMakeAttribute($value)
+    {   if(!$value) {
+            return null;
+        }
+        // rename the camera make to a more readable format
+        $cameraTranslation = [
+            'OLYMPUS IMAGING CORP.' => 'Olympus',
+        ];
+        if (array_key_exists($value, $cameraTranslation)) {
+            return $cameraTranslation[$value];
+        }
+        return $value;
+    }
     
 }

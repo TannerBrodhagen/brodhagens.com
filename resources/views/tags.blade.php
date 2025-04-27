@@ -6,6 +6,9 @@
     <x-layout>
         <x-slot:title>{{ $tag->name }}</x-slot:title>
         <h1>{{ $tag->name }}</h1>
+        @if($tag->description)
+            <p>{{ $tag->description }}</p>
+        @endif
         <section class="container">
             @if ($photos->count() > 0)
                 <div class="tiles">
