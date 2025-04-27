@@ -10,7 +10,7 @@ Route::get('/photos/{photo_id}', function ($photo_id) {
 })->name('photos');
 
 // use the Tag Model to make routes for tags 'name'
-Route::get('/tags/{name}', 'App\Http\Controllers\Public\TagController@index')->name('tags');
+Route::get('/tags/{tag}', 'App\Http\Controllers\Public\TagController@index')->name('tags');
 
 // use the Photo Model to make routes for 'camera_make'
 Route::get('/camera/{camera_make}', function ($camera_make) {

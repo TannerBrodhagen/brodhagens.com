@@ -10,7 +10,7 @@ $tags = App\Models\Tag::all();
             </a>
         @foreach($tags as $tag)
             <li>
-                <a href="{{ route('tags', $tag->name) }}">
+                <a href="{{ route('tags', $tag->slug) }}">
                     {{ $tag->name }}
                 </a>
             </li>
