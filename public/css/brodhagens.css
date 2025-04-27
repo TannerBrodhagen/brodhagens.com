@@ -78,3 +78,25 @@ footer {
     flex-direction: column;
 
 }
+.photo-info {
+    span{
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+th, tr {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+td:first-child {
+    display: inline-flex;
+    width: auto;
+    align-items: flex-end;
+}

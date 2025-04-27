@@ -4,7 +4,7 @@
 @endphp
 @if ($tag)
     <x-layout>
-        <x-slot:title>{{ $tag }}</x-slot:title>
+        <x-slot:title>{{ $tag->name }}</x-slot:title>
         <h1>{{ $tag->name }}</h1>
         <section class="container">
             @if ($photos->count() > 0)

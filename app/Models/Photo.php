@@ -21,5 +21,7 @@ class Photo extends Model
     public function tags(){ // working with pivot table: photo_tags
         return $this->belongsToMany(Tag::class, 'photo_tags', 'photo_id', 'tag_id');
     }
+
+    
     
 }

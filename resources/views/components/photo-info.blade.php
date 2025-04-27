@@ -20,9 +20,7 @@
                 {{ $photo->camera_lens }}
             </span>
         @endif
-        @if ($photo->exif)
-            <x-photo-metadata :exif="$photo->exif" />
-        @endif
+        
     </div>
     <div class="photo-info-details">
         <span>
@@ -53,9 +51,14 @@
             <span class="material-symbols-outlined">
                 bookmark
                 </span>
+                <span>
             @foreach ($photo->tags as $tag)
                 <a href="/tags/{{ $tag->name }}">{{ $tag->name }}</a>@if (!$loop->last)<span>, </span>@endif
             @endforeach
+            </span>
         </div>
     @endif
+    @if ($photo->exif)
+            <x-photo-metadata :exif="$photo->exif" />
+        @endif
 </div>
