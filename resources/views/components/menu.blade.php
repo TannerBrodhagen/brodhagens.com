@@ -10,7 +10,7 @@ $tags = App\Models\Tag::withCount('photos')
             <a href="{{ route('home') }}">
                 Home
             </a>
-            <h5>Tags</h5>
+            <h5>Collections</h5>
         @foreach($tags as $tag)
             <li>
                 <a href="{{ route('tags', $tag->slug) }}">
