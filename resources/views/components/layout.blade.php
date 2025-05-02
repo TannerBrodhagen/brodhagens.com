@@ -11,10 +11,16 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,200" as="style" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,200" />
     
+    @basset('/js/app.js')
 </head>
 
 <body>
     <header>
+        <button class="hamburger" onclick="toggleMenu()">
+            <span class="material-symbols-outlined">menu</span>
+            Brodhagens.com
+        </button>
+        
         <div class="menu">
             <x-menu></x-menu>
         </div>
