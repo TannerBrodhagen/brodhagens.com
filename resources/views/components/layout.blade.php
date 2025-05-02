@@ -18,7 +18,6 @@
     <header>
         <button class="hamburger" onclick="toggleMenu()">
             <span class="material-symbols-outlined">menu</span>
-            Brodhagens.com
         </button>
         
         <div class="menu">
