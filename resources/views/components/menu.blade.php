@@ -1,5 +1,7 @@
 <?php
-$tags = App\Models\Tag::all();
+$tags = App\Models\Tag::withCount('photos')
+->having('photos_count', '>', 0)
+->get();
 ?>
 
 <nav>
@@ -12,7 +14,7 @@ $tags = App\Models\Tag::all();
         @foreach($tags as $tag)
             <li>
                 <a href="{{ route('tags', $tag->slug) }}">
-                    {{ $tag->name }}
+                    {{ $tag->name }} ({{ $tag->photos_count }})
                 </a>
             </li>
         @endforeach

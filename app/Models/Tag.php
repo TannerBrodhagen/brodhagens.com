@@ -18,7 +18,7 @@ class Tag extends Model {
     protected $guarded = ['id'];
 
     public function photos() {
-        return $this->belongsToMany(Photo::class, 'photo_tag');
+        return $this->belongsToMany(Photo::class, 'photo_tags');
     }
 
     // create a slug from the name as an attribute
