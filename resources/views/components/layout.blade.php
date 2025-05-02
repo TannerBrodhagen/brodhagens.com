@@ -23,12 +23,17 @@
         <div class="menu">
             <x-menu></x-menu>
         </div>
-        <footer>
-            &copy; {{ date('Y') }} <a href="https://tannerbrodhagen.com" target="_blank">Tanner Brodhagen</a>
-        </footer>
+        <div class="author">
+                <h2>
+                    Tanner Brodhagen
+                </h2>
+        </div>
     </header>
     <main>
         {{ $slot }}
     </main>
+    <footer>
+        <p>&copy; {{ date('Y') }} <a href="https://tannerbrodhagen.com" target="_blank">Tanner Brodhagen</a></p>
+    </footer>
 </body>
 </html>

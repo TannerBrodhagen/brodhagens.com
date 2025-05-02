@@ -48,12 +48,13 @@
     </div>
     @if ($photo->tags->count() > 0)
         <div class="photo-info-tags">
+            <span>
             <span class="material-symbols-outlined">
                 bookmark
                 </span>
-                <span>
+                
             @foreach ($photo->tags as $tag)
-                <a href="/tags/{{ $tag->name }}">{{ $tag->name }}</a>@if (!$loop->last)<span>, </span>@endif
+            <a href="/tags/{{ $tag->name }}">{{ $tag->name }}</a>@if (!$loop->last)<span>, </span>@endif
             @endforeach
             </span>
         </div>

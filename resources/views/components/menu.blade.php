@@ -8,6 +8,7 @@ $tags = App\Models\Tag::all();
             <a href="{{ route('home') }}">
                 Home
             </a>
+            <h5>Tags</h5>
         @foreach($tags as $tag)
             <li>
                 <a href="{{ route('tags', $tag->slug) }}">
@@ -15,6 +16,7 @@ $tags = App\Models\Tag::all();
                 </a>
             </li>
         @endforeach
+        
         {{-- <li>
             <a href="{{ route('about') }}">
                 About

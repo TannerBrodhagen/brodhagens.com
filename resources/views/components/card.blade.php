@@ -5,17 +5,20 @@
     $photo = $photo ?? null;
 @endphp
 
-@if ($photo)
+@if ($photo->photo)
     <article class="tile">
         <div class="tile-left">
-            @if ($photo->photo)
-                <x-photo :photo="$photo" />
-            @else
-                <p>No image available</p>
-            @endif
+            <button class="photoButton" onclick="togglePhotoInfo(this)">
+                <span class="material-symbols-outlined">info</span>
+            </button>
+            <x-photo :photo="$photo" />
         </div>
         <div class="tile-right">
+            <button class="photoButton" onclick="togglePhotoInfo(this)">
+                <span class="material-symbols-outlined">close</span>
+            </button>
             <x-photo-info :photo="$photo" />
         </div>
     </article>
+    
 @endif
