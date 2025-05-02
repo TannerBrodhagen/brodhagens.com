@@ -6,6 +6,7 @@
     <x-layout>
         <x-slot:title>{{ $tag->name }}</x-slot:title>
         <h1>{{ $tag->name }}</h1>
+        <p>{{$photos->count()}} photos in this collection</p>
         @if($tag->description)
             <p>{{ $tag->description }}</p>
         @endif
