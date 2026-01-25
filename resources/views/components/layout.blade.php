@@ -25,7 +25,7 @@
         </div>
         <div class="author">
                 <h2>
-                    Tanner Brodhagen
+                    Brodhagens Photography
                 </h2>
         </div>
     </header>
@@ -33,7 +33,7 @@
         {{ $slot }}
     </main>
     <footer>
-        <p>&copy; {{ date('Y') }} <a href="https://tannerbrodhagen.com" target="_blank">Tanner Brodhagen</a></p>
+        <p>&copy; {{ date('Y') }} Photos by <a href="https://tannerbrodhagen.com" target="_blank">Tanner Brodhagen</a></p>
     </footer>
 </body>
 </html>
