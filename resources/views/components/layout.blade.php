@@ -33,7 +33,7 @@
         {{ $slot }}
     </main>
     <footer>
-        <p>&copy; {{ date('Y') }} Photos by <a href="https://tannerbrodhagen.com" target="_blank">Tanner Brodhagen</a></p>
+        <p>&copy; {{ date('Y') }} All Photos Owned by <a href="https://tannerbrodhagen.com" target="_blank">Tanner Brodhagen</a></p>
     </footer>
 </body>
 </html>

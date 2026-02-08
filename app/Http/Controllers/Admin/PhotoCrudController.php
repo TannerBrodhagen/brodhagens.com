@@ -25,9 +25,9 @@ class PhotoCrudController extends CrudController
     {
         
         /* COLUMNS */
-        CRUD::column('photo_id');
+        // CRUD::column('photo_id');
         CRUD::column('title');
-        CRUD::column('photo')->type('image')->disk('public')->height('150px')->width('150px');
+        CRUD::column('photo')->type('image')->disk('public')->height('200px')->width('200px');
         CRUD::column('tags')->type('select_multiple')->label('Tags')->entity('tags')->attribute('name')->model('App\Models\Tag');
        
     }

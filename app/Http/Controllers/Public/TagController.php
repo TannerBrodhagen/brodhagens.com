@@ -13,9 +13,14 @@ class TagController extends Controller
         $tag = Tag::where('name', 'like', str_replace('-', ' ', $slug))->firstOrFail();
 
         // Get the photos associated with the tag
-        $photos = Photo::whereHas('tags', function ($query) use ($tag) {
-            $query->where('tags.id', $tag->id);
-        })->get();
+        $photos = Photo::query()
+            ->with('tags')
+            ->whereHas('tags', function ($query) use ($tag) {
+                $query->where('tags.id', $tag->id);
+            })
+            ->orderByDesc('date_taken')
+            ->orderByDesc('created_at')
+            ->get();
 
         return view('tags', compact('photos', 'tag'));
     }

@@ -1,6 +1,7 @@
 <?php
 $tags = App\Models\Tag::withCount('photos')
 ->having('photos_count', '>', 0)
+->orderBy('name')
 ->get();
 ?>
 

@@ -8,7 +8,15 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $photos = Photo::all()->take(9);
+        // Pick the newest 9, then randomize display order.
+        $photos = Photo::query()
+            ->with('tags')
+            ->orderByDesc('date_taken')
+            ->orderByDesc('created_at')
+            ->limit(9)
+            ->get()
+            ->shuffle()
+            ->values();
         return view('home', compact('photos'));
     }
 }
